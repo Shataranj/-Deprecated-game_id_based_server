@@ -4,7 +4,7 @@ const createGame = async (req, res) => {
   const game = new Game();
   const gameId = await game.create();
   res.app.games[gameId] = game;
-  res.status(201).send({ gameId });
+  res.status(201).json({ gameId });
 };
 
 const makeMove = async (req, res) => {
