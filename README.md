@@ -2,5 +2,5 @@
 
 ## Api
 
-* [Create a new Game](https://square-off.herokuapp.com/create)
-* [Make a move](https://square-off.herokuapp.com/makeMove)
+* Create a new Game -> (https://square-off.herokuapp.com/create)
+* Make a move -> (https://square-off.herokuapp.com/makeMove)
