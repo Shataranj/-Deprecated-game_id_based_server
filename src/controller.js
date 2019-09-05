@@ -11,8 +11,9 @@ const makeMove = async (req, res) => {
   const { from, to, gameId } = req.body;
   const game = res.app.games[gameId];
   await game.movePiece(from, to);
-  await game.moveAIPiece();
-  res.send(await game.getFen());
+  const aiMove = await game.moveAIPiece();
+  const fen = await game.getFen();
+  res.json({ aiMove: { from: aiMove.from, to: aiMove.to }, fen });
 };
 
 module.exports = { createGame, makeMove };
